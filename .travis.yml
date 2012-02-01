@@ -16,6 +16,6 @@ notifications:
   recipients:
     - oleg@twg.ca
 branches:
-  expect:
-    - legacy
+  only:
+    - master
   
