@@ -1,4 +1,10 @@
-# ComfortableMexicanSofa (Rails 3 CMS Engine) [![Build Status](https://secure.travis-ci.org/comfy/comfortable-mexican-sofa.png)](http://travis-ci.org/comfy/comfortable-mexican-sofa) [![Dependency Status](https://gemnasium.com/comfy/comfortable-mexican-sofa.png)](https://gemnasium.com/comfy/comfortable-mexican-sofa)
+# ComfortableMexicanSofa (Rails 3 CMS Engine)
+
+[![Build Status](https://secure.travis-ci.org/holli/comfortable-mexican-sofa.png)](http://travis-ci.org/comfy/comfortable-mexican-sofa) [![Dependency Status](https://gemnasium.com/comfy/comfortable-mexican-sofa.png)](https://gemnasium.com/comfy/comfortable-mexican-sofa)
+
+**This version is fork from https://github.com/comfy/comfortable-mexican-sofa . This includes my patches (which are
+ also given as a push request to original repo.**
+
 
 ComfortableMexicanSofa is a powerful CMS Engine for your Rails 3 applications.
 
