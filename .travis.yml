@@ -14,7 +14,7 @@ gemfile:
   - test/gemfiles/Gemfile.rails.3.2
 notifications:
   recipients:
-    - oleg@twg.ca
+    - olli.huotari@iki.fi
 branches:
   only:
     - master
