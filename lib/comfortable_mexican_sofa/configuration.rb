@@ -56,6 +56,12 @@ class ComfortableMexicanSofa::Configuration
   # Setting this to `cms` will look for a cms_#{Rails.env} database definition
   # in your database.yml file
   attr_accessor :database_config
+
+  # Site aliases, if you want to have aliases for your site, All find_site calls
+  # are converted to the first one on array.
+  # Good for testing. e.g. site_aliases = [['domain.com', 'domain.inv'], ['seconddomain.com', 'test.host']]
+  # Default is nil (not used)
+  attr_accessor :site_aliases
   
   # Configuration defaults
   def initialize
@@ -80,6 +86,7 @@ class ComfortableMexicanSofa::Configuration
     }
     @admin_locale         = nil
     @database_config      = nil
+    @site_aliases         = nil
   end
   
 end
