@@ -33,7 +33,7 @@ is_published: "#{page_options["is_published"]}"
 target_page: "#{page_options["target_page"]}"
         File
 
-        content_file = "#{dir}/content"
+        content_file = "#{dir}/content.html"
         create_file content_file, "Find me in #{content_file}"
 
       end

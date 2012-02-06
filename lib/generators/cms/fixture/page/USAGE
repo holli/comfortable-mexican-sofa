@@ -1,10 +1,10 @@
 Description:
-    Generates page fixture templates for specific page. If no parent or layout given, it tries to
-    find site from db and use the first ones.
+    Generates page fixture templates for specific page. If no parent or
+    layout given, it tries to find site from db and use the first ones.
 
 Example:
     rails generate cms:fixture:page domain.com page_slug label:"Hello world" parent:index
 
     This will create:
         db/cms_fixtures/domain.com/pages/index/page_slug/_page_name.yml
-        db/cms_fixtures/domain.com/pages/index/page_slug/content
+        db/cms_fixtures/domain.com/pages/index/page_slug/content.html
