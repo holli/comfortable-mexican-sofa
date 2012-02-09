@@ -57,7 +57,7 @@ class HelperTagTest < ActiveSupport::TestCase
     )
 
     assert_equal "", tag.content
-    assert_equal "", tag.render
+    assert_equal nil, tag.render
   end
 
   def test_using_allowed_helpers_regexp
@@ -95,27 +95,6 @@ class HelperTagTest < ActiveSupport::TestCase
 
     assert_equal %{<%= h('\\'+User.first.inspect+\\'') %>}, tag.content
     assert_equal %{<%= h('\\'+User.first.inspect+\\'') %>}, tag.render
-  end
-  
-  def test_protected_methods_with_irb_enabled
-    ComfortableMexicanSofa.config.allow_irb = true
-    ComfortableMexicanSofa::Tag::Helper::PROTECTED_METHODS.each do |method|
-      tag = ComfortableMexicanSofa::Tag::Helper.initialize_tag(
-        cms_pages(:default), "{{ cms:helper:#{method}:Rails.env }}"
-      )
-      assert_equal "<%= #{method}('Rails.env') %>", tag.content
-      assert_equal "<%= #{method}('Rails.env') %>", tag.render
-    end
-  end
-  
-  def test_protected_methods_with_irb_disabled
-    ComfortableMexicanSofa::Tag::Helper::PROTECTED_METHODS.each do |method|
-      tag = ComfortableMexicanSofa::Tag::Helper.initialize_tag(
-        cms_pages(:default), "{{ cms:helper:#{method}:Rails.env }}"
-      )
-      assert_equal "<%= #{method}('Rails.env') %>", tag.content
-      assert_equal nil, tag.render
-    end
   end
   
 end
