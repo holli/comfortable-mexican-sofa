@@ -5,7 +5,6 @@
 **This version is fork from https://github.com/comfy/comfortable-mexican-sofa . This includes my patches (which are
  also given as a push request to original repo.**
 
-
 ComfortableMexicanSofa is a powerful CMS Engine for your Rails 3 applications.
 
 Features
@@ -29,7 +28,7 @@ Add gem definition to your Gemfile:
 Then from the Rails project's root run:
     
     bundle install
-    rails generate cms
+    rails generate comfy:cms
     rake db:migrate
     
 When upgrading from the older version please take a look at [Upgrading ComfortableMexicanSofa](https://github.com/comfy/comfortable-mexican-sofa/wiki/Upgrading-ComfortableMexicanSofa)

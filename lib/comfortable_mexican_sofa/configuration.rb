@@ -74,7 +74,7 @@ class ComfortableMexicanSofa::Configuration
     @allow_irb            = false
     @allowed_helpers      = nil
     @disabled_helpers      = /eval|send|call|puts|print/
-    @upload_file_options  = {}
+    @upload_file_options  = { :url => '/system/:class/:id/:attachment/:style/:filename' }
     @enable_fixtures      = false
     @fixtures_path        = File.expand_path('db/cms_fixtures', Rails.root)
     @revisions_limit      = 25
