@@ -21,7 +21,11 @@ class ComfortableMexicanSofa::Configuration
   # When arriving at /cms-admin you may chose to redirect to arbirtary path,
   # for example '/cms-admin/users'
   attr_accessor :admin_route_redirect
-  
+
+  # Normally we include default routes from https://github.com/comfy/comfortable-mexican-sofa/blob/master/config/routes.rb
+  # If you want to include the routes manually set this to false
+  attr_accessor :include_default_routes
+
   # Not allowing irb code to be run inside page content. False by default.
   attr_accessor :allow_irb
 
@@ -75,6 +79,7 @@ class ComfortableMexicanSofa::Configuration
     @seed_data_path       = nil
     @admin_route_prefix   = 'cms-admin'
     @admin_route_redirect = ''
+    @include_default_routes = true
     @allow_irb            = false
     @allowed_helpers      = nil
     @disabled_helpers      = /eval|send|call|puts|print/
