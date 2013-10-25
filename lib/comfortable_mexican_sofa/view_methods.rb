@@ -26,7 +26,7 @@ module ComfortableMexicanSofa::ViewMethods
     else
       return '' unless snippet = cms_site.snippets.find_by_identifier(identifier)
     end
-    render :inline => ComfortableMexicanSofa::Tag.process_content(cms_site.pages.build, snippet.content)
+    render :inline => ComfortableMexicanSofa::Tag.process_content(cms_site.pages.build, ComfortableMexicanSofa::Tag.sanitize_irb(snippet.content))
   end
   
   # Content of a page block. This is how you get content from page:field
@@ -44,7 +44,7 @@ module ComfortableMexicanSofa::ViewMethods
     when ComfortableMexicanSofa::Tag::PageFiles
       block.files
     else
-      render :inline => ComfortableMexicanSofa::Tag.process_content(page, block.content)
+      render :inline => ComfortableMexicanSofa::Tag.process_content(page, ComfortableMexicanSofa::Tag.sanitize_irb(block.content))
     end
   end
 end
